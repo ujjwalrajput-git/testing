@@ -1,0 +1,5 @@
+@share
+Feature: Share data
+  Scenario: share data scenario
+    Given vriable comes here firt
+    When variable comes here second
