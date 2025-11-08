@@ -10,7 +10,7 @@ public class P14_SubArray {
 			for(int inner = outer;inner <= arr.length; inner++) {
 				int[]sub = Arrays.copyOfRange(arr, outer, inner);
 				for(int num:sub) {
-					System.out.print(num+"  ");
+					System.out.print(num+" ");
 				}
 				System.out.println();
 			}
