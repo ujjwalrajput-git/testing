@@ -1,0 +1,13 @@
+package day3;
+
+public class Wrap {
+	public static void main(String[] args) {
+		Integer num = 10;
+		String s1 = "1234", s2 = "12.56";
+		int dataInt = Integer.parseInt(s1);
+		float dataFloat = Float.parseFloat(s2);
+		System.out.println(dataInt+"\n"+dataFloat);
+				
+	}
+
+}

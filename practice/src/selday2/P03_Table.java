@@ -1,0 +1,44 @@
+package selday2;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class P03_Table {
+    public static void main(String[] args) throws InterruptedException {
+        ChromeDriver driver=new ChromeDriver();
+        driver.get("file:///C:/Users/Ujjwal.Rajput/Downloads/html_pages/index.html");
+        driver.manage().window().maximize();
+        Thread.sleep(1000);
+        
+        List<WebElement> rows=driver.findElements(By.xpath("//table//tr"));
+        List<String> foodItems=new ArrayList<>();
+        for(int i=2;i<=rows.size();i++){
+            int total=0;
+            String food=driver.findElement(By.xpath("//table//tr[position()="+i+"]//td[1]")).getText();
+            WebElement row= driver.findElement(By.xpath("//table//tr[position()="+i+"]//td[4]"));
+
+            String stringTotal=row.getText();
+            total=Integer.parseInt(stringTotal);
+            System.out.println("total: "+total);
+            row.findElement(By.tagName("a")).click();
+            Thread.sleep(1000);
+            List<WebElement> rows2=driver.findElements(By.xpath("//table//tr"));
+            int sum2=0;
+            for(int j=2;j<=rows2.size();j++){
+                String data=driver.findElement(By.xpath("//table//tr[position()="+j+"]//td[3]")).getText();
+                sum2+=Integer.parseInt(data);
+            }
+            System.out.println("sum2: "+sum2);
+            if(sum2!=total) foodItems.add(food);
+            driver.navigate().back();
+
+        }
+        System.out.println(foodItems);
+    }
+}
+ 

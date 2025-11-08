@@ -1,0 +1,26 @@
+package day3;
+import java.util.*;
+
+public class Input {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int num = sc.nextInt();
+		System.out.println(num);
+		
+		String str = sc.next();
+		System.out.println(str);
+		
+		float dec = sc.nextFloat();
+		System.out.println(dec);
+		
+		boolean flag = sc.nextBoolean();
+		System.out.println(flag);
+		
+		String line  = sc.nextLine();
+		System.out.println(line);
+		
+		char c = sc.next().charAt(0);
+		System.out.println(c);
+	}
+}

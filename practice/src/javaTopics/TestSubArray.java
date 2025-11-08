@@ -1,0 +1,16 @@
+package javaTopics;
+
+import java.util.Arrays;
+
+
+public class TestSubArray {
+	public static void main(String[] args) {
+		int[] list = {10, 20, 30, 40, 50};
+		int[]sub = Arrays.copyOfRange(list, 1, 5);
+		for(int num:sub) {
+			System.out.print(num+" ");
+		}
+		System.out.println();
+		
+	}
+}

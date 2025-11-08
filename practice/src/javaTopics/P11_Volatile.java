@@ -1,0 +1,10 @@
+package javaTopics;
+
+public class P11_Volatile {
+	
+	volatile int num = 10;
+	public static void main(String[] args) {
+		System.out.println("volatile");
+		//System.out.println(num);
+	}
+}

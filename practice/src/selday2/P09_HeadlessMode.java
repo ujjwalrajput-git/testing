@@ -1,0 +1,19 @@
+package selday2;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class P09_HeadlessMode {
+	public static void main(String[] args) {
+		
+		ChromeOptions opt = new ChromeOptions();
+		opt.addArguments("--headless");
+		
+		ChromeDriver driver = new ChromeDriver(opt);
+		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.manage().window().maximize();
+		
+		System.out.println(driver.getTitle());
+		System.out.println("done");
+	}
+}

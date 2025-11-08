@@ -1,0 +1,22 @@
+package selday2;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class P08_SS {
+	public static void main(String[] args) throws IOException, InterruptedException {
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.manage().window().maximize();
+		
+		File src = driver.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("./image1.JPG"));
+		
+		Thread.sleep(3000);
+		System.out.println(driver.getTitle());
+	}
+}

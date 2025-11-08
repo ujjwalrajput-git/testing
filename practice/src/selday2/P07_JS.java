@@ -1,0 +1,18 @@
+package selday2;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class P07_JS {
+	public static void main(String[] args) {
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.manage().window().maximize();
+		
+		JavascriptExecutor js = driver;
+		js.executeScript("document.getElementById('name').value = 'hello';");
+		
+		js.executeScript("window.scrollBy(0,800)");
+	}
+}

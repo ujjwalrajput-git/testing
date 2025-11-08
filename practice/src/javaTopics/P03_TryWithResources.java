@@ -1,0 +1,17 @@
+package javaTopics;
+
+import java.io.File;
+import java.io.FileWriter;
+
+public class P03_TryWithResources {
+	public static void main(String[] args) {
+		File file = new File("C:\\Users\\Ujjwal.Rajput\\eclipse-workspace\\practice\\src\\javaTopics\\OpFile.txt");
+		try(FileWriter fw = new FileWriter(file)){
+			fw.write("\nthis is line five\nthis is linie six");
+			fw.close();
+		}
+		catch(Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+	}
+}

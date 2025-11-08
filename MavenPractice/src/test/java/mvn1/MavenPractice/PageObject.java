@@ -1,0 +1,16 @@
+package mvn1.MavenPractice;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PageObject {
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.manage().window().maximize();
+		
+		FormPage2 page = new FormPage2(driver);
+		page.getUserInput().sendKeys("UR 8800");
+		
+	}
+}
