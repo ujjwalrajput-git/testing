@@ -103,3 +103,4 @@
 0:00:36 Tab4 StartNav8 #typed
 0:00:36 Tab4 FinishNav8
 0:00:36 Tab4 PageLoad
+0:01:31 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
