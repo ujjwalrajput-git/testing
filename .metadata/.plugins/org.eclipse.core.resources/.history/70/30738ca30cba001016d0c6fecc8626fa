@@ -1,0 +1,16 @@
+package selday4;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+public class LogPractice {
+	private static Logegr log = LogManager.getLogger(LogPractice.class.getName());
+	
+	public static void main(String[] args) {
+		log.debug("Hello");
+		log.error("Error found");
+		log.info("Code ran successfully");
+		log.fetal("Exception found");
+		
+	}
+}

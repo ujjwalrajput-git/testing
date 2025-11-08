@@ -1,0 +1,33 @@
+package selday2;
+
+import java.util.Set;
+
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class P12_Cookie {
+	public static void main(String[] args) {
+		
+	
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://www.geeksforgeeks.org/");
+		driver.manage().window().maximize();
+		driver.manage().window().minimize();
+		
+		Cookie newCookie = new Cookie("CompanyName", "Coforge");
+		driver.manage().addCookie(newCookie);
+		
+		Set<Cookie> cookieSet = driver.manage().getCookies();
+		
+		for(Cookie cookie:cookieSet) {
+			System.out.println(cookie.getName()+" "+cookie.getValue());
+		}
+		driver.manage().deleteAllCookies();
+		System.out.println("\n-------------------------\n");
+		cookieSet = driver.manage().getCookies();
+		for(Cookie cookie:cookieSet) {
+			System.out.println(cookie.getName()+" "+cookie.getValue());
+		}
+		System.out.println("done");
+	}		
+}

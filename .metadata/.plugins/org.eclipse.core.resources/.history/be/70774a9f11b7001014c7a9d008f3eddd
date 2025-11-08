@@ -1,0 +1,17 @@
+package selday1;
+
+public class P19_Finally {
+	public static void main(String[] args) {
+		try {
+			System.out.println("Hello");
+			int num = 10/0;
+		}
+		catch(Exception ex){
+			System.out.println(ex.getMessage());
+			System.exit(0);
+		}
+		finally {
+			System.out.println("I will always execute");
+		}
+	}
+}

@@ -1,0 +1,10 @@
+package selday1;
+
+public class P17_Exception {
+	public static void main(String[] args) {
+		//Exception e = new Exception;
+		System.out.println("Hello");
+		System.out.println(5/0);
+		System.out.println("bye");
+	}
+}

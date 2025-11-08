@@ -1,0 +1,25 @@
+package selday2;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class P13_ExtendedOpenTime {
+	public static void main(String[] args) {
+		
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		driver.get("https://www.geeksforgeeks.org/");
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.findElement(By.xpath("//*[@id=\"comp\"]/div/div[1]/div[3]/ul/li[1]/div/button")).click();
+		
+		
+		driver.manage().window().maximize();
+		
+		
+	}
+}

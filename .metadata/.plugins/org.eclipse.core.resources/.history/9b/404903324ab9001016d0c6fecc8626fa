@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="3" name="Test" parallel="method ">
+    <classes>
+       <class name="testcases.CommentTest"/> 
+      <!-- <class name="testcases.P02_SelTestCase"/>
+      <class name="testcases.PriorityTest"/> 
+      <class name="testcases.PaymentTest"/> -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

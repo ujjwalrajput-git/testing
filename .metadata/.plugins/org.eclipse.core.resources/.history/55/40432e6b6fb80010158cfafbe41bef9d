@@ -1,0 +1,16 @@
+package selday2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class P01_TutorialPoint {
+	public static void main(String[] args) {
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://www.tutorialspoint.com/");
+		driver.manage().window().maximize();
+		
+		WebElement footer = driver.findElement(By.xpath("/html/body/footer"));
+		System.out.println(footer.getTagName());
+	}
+}

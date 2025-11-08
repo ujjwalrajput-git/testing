@@ -1,0 +1,20 @@
+package testcases;
+
+import org.testng.IRetryAnalyzer;
+import org.testng.ITestResult;
+
+public class Rerun implements IRetryAnalyzer{
+
+	@Override
+	public boolean retry(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+		if(retry<=2) {
+			System.out.println(" Attempt "+return);
+			return ++
+		}
+		else
+			return false;
+	}
+	
+}

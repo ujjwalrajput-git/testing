@@ -1,0 +1,20 @@
+package javaTopics;
+
+import java.lang.reflect.Field;
+
+class Test{
+	public int id4544654;
+	protected final String testName="Maths Exam";
+}
+
+public class P04_ReflectionApi {
+	
+	public static void main(String[] args) {
+		Class<Test> obj = Test.class;
+		Field[]fieldData = obj.getDeclaredFields();
+		for(Field field:fieldData) {
+			int modifier = field.getModifiers();
+			System.out.print(field.getName()+" ");
+		}
+	}
+}

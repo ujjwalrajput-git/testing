@@ -1,0 +1,20 @@
+package selday2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class P11_ShadowDom {
+	public static void main(String[] args) {
+		
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.manage().window().maximize();
+		
+		WebElement host = driver.findElement(By.xpath("//*[@id=\"shadow_host\"]"));
+		SearchContext root = host.getShadowRoot();
+		WebElement content = root.findElement(By.xpath("//*[@id=\"shadow_content\"]"));
+		System.out.println(content);
+	}
+}

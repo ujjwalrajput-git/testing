@@ -1,0 +1,42 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+<!--    <parameter name="username" value="user@2345"></parameter>-->
+<!--    <parameter name="password" value="pass@2345"></parameter>-->
+    <test thread-count="3" name="Test">
+        <classes>
+        	<class name="testcases.CommentTest"/>
+                <methods>
+                    <exclude name="methodC"></exclude>
+                </methods>
+            </class>
+
+            <!--
+            <class name="Vansh_Test.Swayam_Test.LoginTest">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+            <class name="testNG_pract.CommentTest">
+                <methods>
+                    <include name="feedback"/>
+                    <include name="likeBtn"/>
+                </methods>
+            </class>
+            -->
+<!--            <class name="testNG_pract.MethodTest"/>-->
+<!--                <class name="testNG_pract.PaymentTest"/>-->
+
+
+            <!--
+            <class name="testNG_pract.SeleniumTest">
+                <methods>
+                    <include name="methodC"/>
+                    <include name="methodB"/>
+                    <include name="methodA"/>
+                </methods>
+            </class>-->
+        </classes>
+    </test>
+</suite>

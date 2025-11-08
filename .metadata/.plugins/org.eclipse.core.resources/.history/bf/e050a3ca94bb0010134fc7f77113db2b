@@ -1,0 +1,63 @@
+package resources;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Iterator;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ReadExcel {
+	public static void main(String args[]) throws IOException
+	{
+		ReadExcel obj=new ReadExcel();
+		Data data=obj.getData();
+		System.out.println(data.getDestination());
+		System.out.println(data.getCheckInDate());
+		System.out.println(data.getCheckInDay());
+
+		System.out.println(data.getCheckOutDate());
+		System.out.println(data.getCheckOutDay());
+
+		System.out.println(data.getMinPrice());
+		System.out.println(data.getMaxPrice());
+		
+	}
+
+	public Data getData() throws IOException {
+			FileInputStream file=new FileInputStream
+			("C:\\Users\\Ujjwal.Rajput\\eclipse-workspace\\airbnb_final\\src\\main\\java\\resources");
+			
+			//----------------------------------------------
+			
+			
+			Workbook book=new XSSFWorkbook(file);
+			Sheet sheet = book.getSheetAt(0);
+			Iterator<Row>rows=sheet.iterator();
+			Data rowData=new Data();
+			while(rows.hasNext())
+			{
+				
+				String destination=rows.next().getCell(1).toString();
+				String checkInDate=rows.next().getCell(1).toString();
+				checkInDate=checkInDate.substring(1,checkInDate.length()-1);
+				String checkInDay=rows.next().getCell(1).toString();
+				String checkOutDate=rows.next().getCell(1).toString();
+				checkOutDate=checkOutDate.substring(1,checkOutDate.length()-1);
+				String checkOutDay=rows.next().getCell(1).toString();
+				int minPrice=(int)rows.next().getCell(1).getNumericCellValue();
+				int maxPrice=(int)rows.next().getCell(1).getNumericCellValue();
+				rowData.setDestination(destination);
+				rowData.setCheckInDate(checkInDate);
+				rowData.setCheckInDay(checkInDay);
+				rowData.setCheckOutDate(checkOutDate);
+				rowData.setCheckOutDay(checkOutDay);
+				rowData.setMinPrice(minPrice);
+				rowData.setMaxPrice(maxPrice);
+				return rowData;
+			}
+			return rowData;
+		}
+}

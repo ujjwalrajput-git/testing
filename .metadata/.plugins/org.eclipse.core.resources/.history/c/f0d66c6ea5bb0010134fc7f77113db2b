@@ -1,0 +1,49 @@
+package base;
+
+import java.io.*;
+import java.util.Properties;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Base {
+	WebDriver driver;
+	public WebDriver initializeDriver() throws IOException
+	{
+		Properties prop=new Properties();
+		FileInputStream fis =new FileInputStream
+		("C:\\Users\\Priyanka Arora\\eclipse-workspace\\"
+				+ "airbnb_final\\src\\main\\java\\data.properties");
+		prop.load(fis);
+		String browser=prop.getProperty("browser");
+		if (browser.equals("chrome"))
+		{
+			driver=new ChromeDriver();
+		}
+		return driver;		
+	}
+	public String getUrl() throws IOException
+	{
+		Properties prop=new Properties();
+		FileInputStream fis =new FileInputStream("C:\\Users\\Ujjwal.Rajput\\eclipse-workspace\\airbnb_final\\src\\main\\java\\data.properties");
+		prop.load(fis);
+		String url=prop.getProperty("browser_url");
+		return url;		
+	}
+	public void takeScreenshot(WebDriver driver,String path)
+	{
+		File scrFile = 
+		((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        try {
+        	String destinationFile =
+        	System.getProperty("user.dir")
+        	+"\\screenshots\\"+path+".png";
+        	FileUtils.copyFile(scrFile,new File(destinationFile));
+		} catch (IOException e1) {
+			e1.printStackTrace();			
+		}
+	}
+}

@@ -1,0 +1,37 @@
+package selday2;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class P01_TutorialPoint {
+	public static void main(String[] args) throws MalformedURLException, IOException {
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://www.tutorialspoint.com/");
+		driver.manage().window().maximize();
+		
+		List<WebElement> footer = driver.findElements(By.tagName("footer"));
+		for(WebElement link : footer) {
+			HttpURLConnection conn = (HttpURLConnection) new URL(link.getAttribute("href")).openConnection();
+			conn.setRequestMethod("GET");
+			conn.connect();
+			
+			System.out.print(link.getText()+"/t/t");
+			
+			if(conn.getResponseCode() == 404)	
+				System.out.println("not working");
+			else
+				System.out.println("working");
+			
+			
+			
+			
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package hooks;
+
+public class HookStep {
+	@Before
+	public void setup() {
+		System.out.println("i will run 1 st");
+	}
+	
+	@After
+	public void tearDown() {
+		
+	}
+}

@@ -1,0 +1,36 @@
+package testcases;
+
+public class P03_PaymentTest {
+	
+	@BeforeSuit
+	void beforeSuit() {
+		System.out.println("Before Suit");
+	}
+	
+	@AftereSuit
+	void afterSuit() {
+		System.out.println("After Suit");
+	}
+	
+	@BeforeClass
+	void beforeClass() {
+		System.out.println("Before Class");
+	}
+	
+	@AfterClass
+	void AfterSuit() {
+		System.out.println("After Suit");
+	}
+	
+	
+	@BeforeMethod
+	void beforeMethod() {
+		System.out.println("Before Method");
+	}
+	
+	@AfterMethod
+	void AfterMethod() {
+		System.out.println("After Method");
+	}
+
+}

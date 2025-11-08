@@ -1,0 +1,7 @@
+package selday4;
+
+public class ExcelReading {
+	public static void main(String[] args) {
+		System.out.println("hi jav");
+	}
+}

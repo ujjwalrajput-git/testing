@@ -1,0 +1,36 @@
+package selday2;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class P02_StaleLink {
+	public static void main(String[] args) throws InterruptedException {
+		ChromeDriver driver = new ChromeDriver(); 
+		driver.get("file:///C:/Users/Ujjwal.Rajput/Downloads/html_pages/index.html");
+		driver.manage().window().maximize();
+		List<WebElement> links = driver.findElements(By.tagName("a"));
+		int count = links.size();
+		
+		for(int i = 0; i < count; i++) {
+			links = driver.findElements(By.tagName("a"));
+			WebElement link = links.get(i);
+			System.out.println(link.getText());
+			link.click();
+			Thread.sleep(500);
+			List<WebElement> prices = driver.findElements(By.xpath("//table//tr"));
+			for(int j = 1; i < prices.size(); j++) {
+				WebElement price = driver.findElement(By.xpath("//table/tr["+j+"]/td"));
+				System.out.print(price.getText()+"\t");
+			}
+			driver.navigate().back();
+			
+		}
+		
+		Thread.sleep(2000);
+		driver.close();
+		
+	}
+}
