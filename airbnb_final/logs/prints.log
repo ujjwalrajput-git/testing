@@ -1,0 +1,4 @@
+15:07:39.761 [main] INFO  pro.airbnb_final.BookingTest - checkout date  entered
+15:08:01.697 [main] INFO  pro.airbnb_final.BookingTest - minimum price entered
+15:08:26.331 [main] INFO  pro.airbnb_final.BookingTest - 90 homes in Lonavala
+15:08:26.331 [main] INFO  pro.airbnb_final.BookingTest - test case has passed

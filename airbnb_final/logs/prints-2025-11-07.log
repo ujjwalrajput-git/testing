@@ -1,0 +1,6 @@
+15:07:11.599 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stcelltypebf95type
+15:07:11.603 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stxstringf179type
+15:07:30.065 [main] INFO  pro.airbnb_final.BookingTest - Pop up didnt come
+15:07:36.100 [main] INFO  pro.airbnb_final.BookingTest - URl launched
+15:07:36.437 [main] INFO  pro.airbnb_final.BookingTest - destination entered
+15:07:38.644 [main] INFO  pro.airbnb_final.BookingTest - checkin date  entered
