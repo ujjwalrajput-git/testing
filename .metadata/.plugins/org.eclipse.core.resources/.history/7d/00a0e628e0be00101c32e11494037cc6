@@ -1,0 +1,25 @@
+package pojo;
+
+import java.util.*;
+
+
+public class Recipe {
+	{
+	      int id;
+	      String name;
+	      ArrayList<String> ingredients;
+	      ArrayList<String> instructions;
+	      int prepTimeMinutes;
+	      int cookTimeMinutes;
+	      int servings;
+	      String difficulty;
+	      String cuisine;
+	      int caloriesPerServing;
+	      ArrayList<String> tags;
+	      int userId;
+	      String image;
+	      float rating;
+	      int reviewCount;
+	      ArrayList<String> mealType;
+	    }
+}

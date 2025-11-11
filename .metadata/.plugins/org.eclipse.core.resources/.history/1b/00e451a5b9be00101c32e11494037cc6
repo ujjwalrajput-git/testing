@@ -1,0 +1,11 @@
+package apiTesting;
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+
+public class P01_Basic {
+	public static void main(String[] args) {
+		RestAssured.baseURI ="http://jsonplaceholder.typicode.com";
+		given().header("Connection", "keep-alive").when().get("/posts/1").then().log().all();
+	}
+}

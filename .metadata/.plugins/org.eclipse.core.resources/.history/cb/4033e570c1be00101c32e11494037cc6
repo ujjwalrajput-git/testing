@@ -1,0 +1,16 @@
+package apiTesting;
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+
+public class P01_Basic {
+	public static void main(String[] args) {
+		RestAssured.useRelaxedHTTPSValidation();
+		RestAssured.baseURI ="https://api.open-meteo.com";
+		String resp = given()
+		.header("Connection", "keep-alive")
+		.when().get("/v1/forecast")
+		.then().extract().response().asString();
+		System.out.println(resp);
+	}
+}

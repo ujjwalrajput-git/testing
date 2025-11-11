@@ -1,0 +1,21 @@
+package apiTesting;
+
+import io.restassured.RestAssured;
+import pojo.Output;
+
+import static io.restassured.RestAssured.given;
+
+public class P05_Pojo {
+	public static void main(String[] args) {
+		System.setProperty("java.net.useSystemProxies", "true");
+        RestAssured.useRelaxedHTTPSValidation();
+		
+		RestAssured.baseURI = "https://dummyjson.com";
+		
+		Output resp = given()
+				.header("Connection", "keep-alive")
+				.when().get("/recipes").as(Output.class);
+		System.out.println(resp.getRecipes().get(0).getIngredients());
+		 
+	}
+}

@@ -1,0 +1,11 @@
+package pojo;
+
+import java.util.*;
+
+public class Output {
+	List<Recipe> recipes;
+	int total;
+	int skip;
+	int limit;
+	
+}

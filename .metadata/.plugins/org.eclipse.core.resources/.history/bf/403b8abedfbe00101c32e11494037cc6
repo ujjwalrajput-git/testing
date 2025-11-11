@@ -1,0 +1,30 @@
+package pojo;
+
+import java.awt.List;
+
+
+public class Recipe {
+	{
+	      int id;
+	      String name;
+	      ArrayList<String> ingredients;
+	      ArrayList<String> instructions;
+	      int prepTimeMinutes;
+	      int cookTimeMinutes;
+	      int servings;
+	      "difficulty": "Easy",
+	      "cuisine": "Italian",
+	      "caloriesPerServing": 300,
+	      "tags": [
+	        "Pizza",
+	        "Italian"
+	      ],
+	      "userId": 166,
+	      "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+	      "rating": 4.6,
+	      "reviewCount": 98,
+	      "mealType": [
+	        "Dinner"
+	      ]
+	    }
+}

@@ -1,0 +1,29 @@
+package apiTesting;
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+ 
+public class P02_BasicPost {
+    public static void main(String[] args) {
+        System.setProperty("java.net.useSystemProxies", "true");
+        RestAssured.useRelaxedHTTPSValidation();
+        
+        RestAssured.baseURI = "https://fakestoreapi.com";
+ 
+        String output = given()
+            .header("Content-Type", "application/json")
+            .body("{\r\n"
+                + "    \"title\": \"Corporate Test Product\",\r\n"
+                + "    \"price\": 199.99,\r\n"
+                + "    \"description\": \"This is a test product created via RestAssured\",\r\n"
+                + "    \"image\": \"https://i.pravatar.cc\",\r\n"
+                + "    \"category\": \"electronics\"\r\n"
+                + "}")
+        .when()
+            .post("/products")
+        .then()
+            .extract().response().asString();
+ 
+        System.out.println("Response: " + output);
+    }
+}

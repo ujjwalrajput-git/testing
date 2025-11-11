@@ -1,0 +1,21 @@
+package apiTesting;
+
+import static io.restassured.RestAssured.given;
+
+import io.restassured.RestAssured;
+
+public class P08_Validation {
+	public static void main(String[] args) {
+		System.setProperty("java.net.useSystemProxies","true");
+
+		RestAssured.useRelaxedHTTPSValidation();
+		
+		
+		RestAssured.baseURI ="https://jsonplaceholder.typicode.com/";
+		given()
+		.header("Connection", "keep-alive")
+		.when().get("/posts/1")
+		.then().log().all();
+		
+	}
+}
