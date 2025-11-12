@@ -10,7 +10,7 @@ public class P07_OAuth {
 		
 		RestAssured.baseURI = "https://api.github.com";
 		given().auth()
-		.oauth2("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_ignore")
+		.oauth2("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")
 		.when().get("user/repos")
 		.then().log().all();
 	}
