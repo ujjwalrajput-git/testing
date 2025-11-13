@@ -27,6 +27,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="appi.appiumPractice"/>
 			<item value="pro.airbnb_final"/>
 			<item value="mvn2.cucumberPractice"/>
 			<item value="mvn1.MavenPractice"/>
@@ -35,12 +36,14 @@
 			<item value="test.ujjwal"/>
 		</list>
 		<list key="groupId">
+			<item value="appi"/>
 			<item value="pro"/>
 			<item value="mvn2"/>
 			<item value="mvn1"/>
 			<item value="test"/>
 		</list>
 		<list key="artifactId">
+			<item value="appiumPractice"/>
 			<item value="airbnb_final"/>
 			<item value="cucumberPractice"/>
 			<item value="MavenPractice"/>

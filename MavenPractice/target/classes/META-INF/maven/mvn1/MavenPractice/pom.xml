@@ -143,6 +143,8 @@
 	  </profile>
   </profiles>
 
+	
+
   <dependencies>
   
   	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
@@ -203,6 +205,8 @@
 	    <artifactId>rest-assured</artifactId>
 	    <version>5.4.0</version>
 	</dependency>
+	
+	
 		
 <!--    <dependency>-->
 <!--      <groupId>org.junit.jupiter</groupId>-->
@@ -216,6 +220,8 @@
 <!--      <artifactId>junit-jupiter-params</artifactId>-->
 <!--      <scope>test</scope>-->
 <!--    </dependency>-->
+
+	
   </dependencies>
 
   

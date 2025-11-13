@@ -1,7 +1,0 @@
-package mvn1.MavenPractice;
-
-public class ReportExampleTest {
-	public static void main(String[] args) {
-		System.out.println("Hello");
-	}
-}
