@@ -22,11 +22,12 @@
 		</list>
 		<list key="textEntries">
 			<item value="1"/>
-			<item value="1"/>
+			<item value="2"/>
 		</list>
 		<list key="textArray">
 			<item value="new class"/>
 			<item value="new file"/>
+			<item value="new cl"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">

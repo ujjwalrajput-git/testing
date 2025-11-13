@@ -1,30 +1,28 @@
 package appiu;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import com.google.common.collect.ImmutableMap;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
-public class AppiumPrac {
+public class LongPress {
 	public static void main(String[] args) throws InterruptedException, MalformedURLException {
 		AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
 		service.start();
         UiAutomator2Options opt=new UiAutomator2Options();
-        opt.setDeviceName("dev1");
+        opt.setDeviceName("d1");
         opt.setApp("C:\\Users\\Ujjwal.Rajput\\eclipse-workspace\\appiumPractice\\src\\main\\java\\resources\\ApiDemos-debug.apk");
-
-        //opt.setAppPackage("io.appium.android.apis");
-        //opt.setAppActivity(".ApiDemos");
-
+        
         
         AndroidDriver driver=new AndroidDriver(new URL("http://127.0.0.1:4723"),opt);
         Thread.sleep(2000);
@@ -40,5 +38,6 @@ public class AppiumPrac {
         	    "elementId", ((RemoteWebElement) element).getId()
         	));
         Thread.sleep(12000);
+        System.out.println("Long pressed");
 	}
 }

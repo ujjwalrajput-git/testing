@@ -1,8 +1,0 @@
-Fature: Testing loginfuntionality
-
-	Scanario: Testing positive test case
-		Given user is on the home screen
-		And account is already created
-		When correct username is entered
-		And correct password isentered
-		Then user is successfully logged in
