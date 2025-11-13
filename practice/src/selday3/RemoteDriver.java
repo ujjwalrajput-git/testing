@@ -11,8 +11,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class RemoteDriver {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws MalformedURLException {
-		String SAUCE_USERNAME = "oauth-ujjwalrajput8800-e8ca7";
-        String SAUCE_ACCESS_KEY = "ac1a148d-08e8-4592-88b2-c71ff81bf289";
+		String SAUCE_USERNAME = "";
+        String SAUCE_ACCESS_KEY = "";
 
         // Sauce Labs URL
     
