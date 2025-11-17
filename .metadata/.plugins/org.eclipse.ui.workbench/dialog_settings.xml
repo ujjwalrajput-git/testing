@@ -13,7 +13,7 @@
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 		<list key="orderedElements">
-			<item value="org.eclipse.ui.newWizard(newWizardId=org.eclipse.jdt.ui.wizards.NewClassCreationWizard)"/>
+			<item value="AUTOGEN:::org.eclipse.jdt.ui.JavaElementCreationActionSet/org.eclipse.jdt.ui.actions.NewTypeDropDown"/>
 			<item value="org.eclipse.ui.newWizard"/>
 		</list>
 		<list key="orderedProviders">
@@ -26,7 +26,7 @@
 		</list>
 		<list key="textArray">
 			<item value="new class"/>
-			<item value="new file"/>
+			<item value="new pack"/>
 			<item value="new cl"/>
 		</list>
 	</section>
