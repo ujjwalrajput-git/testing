@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 2025/11/13-23:21:31.769 b224 Creating DB D:\Github\testing\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage since it was missing.
 2025/11/13-23:21:31.775 b224 Reusing MANIFEST D:\Github\testing\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/MANIFEST-000001
+=======
+2025/11/13-15:40:10.247 4bbc Reusing MANIFEST C:\Users\Ujjwal.Rajput\eclipse-workspace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/MANIFEST-000001
+2025/11/13-15:40:10.257 4bbc Recovering log #3
+2025/11/13-15:40:10.265 4bbc Reusing old log C:\Users\Ujjwal.Rajput\eclipse-workspace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/000003.log 
+>>>>>>> a3832d4c5aad2a435ac3e81bc2fe0b5309e15cd4

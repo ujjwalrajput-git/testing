@@ -10,6 +10,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="log"/>
 			<item value="driver.close"/>
 			<item value="max"/>
 			<item value="the_user_with_value_is_on_the_home_screen"/>
